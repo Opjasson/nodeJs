@@ -13,13 +13,13 @@ export async function getData(req, res) {
                 "alamat",
                 "maps",
                 "contact",
-                "terdekat",
+
                 "createdAt",
             ],
         });
         res.status(200).json(response);
     } catch (error) {
-        response.status(500).json({ msg: error.message });
+        res.status(500).json({ msg: error.message });
     }
 }
 
@@ -46,7 +46,7 @@ export async function addData(req, res) {
             maps: maps,
             harga: harga,
             alamat: alamat,
-            contact: contact
+            contact: contact,
         });
         res.status(201).json({ msg: "Data berhasil ditambahakan!" });
     } catch (error) {

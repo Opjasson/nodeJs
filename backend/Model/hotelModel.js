@@ -47,10 +47,6 @@ const hotel = db.define(
             type: DataTypes.STRING,
             allowNull: true,
         },
-        terdekat: {
-            type: DataTypes.TEXT,
-            allowNull: true,
-        },
     },
     {
         freezeTableName: true,
